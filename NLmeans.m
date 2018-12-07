@@ -4,7 +4,7 @@ addpath('testnlm');
 folderTest   = 'test_images';
 ext          =  {'*.jpg','*.png','*.bmp'};
 
-showResult  = 1;
+showResult  = 0;
 pauseTime   = 0;
 
 % load images paths

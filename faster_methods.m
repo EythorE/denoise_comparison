@@ -1,4 +1,3 @@
-
 addpath('utilities');
 addpath('TVL1denoise');
 addpath('ROFdenoise');
@@ -88,12 +87,13 @@ end
 
 
 function method = fdenoisers
-    method{1} = @(image) fAverage(image);
-    method{2} = @(image) fMedian(image);
-    method{3} = @(image) fWiener(image);
-    method{4} = @(image) fROF(image);
-    method{5} = @(image) fTV_L1(image);
-    %method{6} = @(image) fNL_means(image); % slow AF
+    method{1} = @(image) fAverage(image); %3.471s
+    method{2} = @(image) fMedian(image); %4.017s
+    method{3} = @(image) fWiener(image); %3.238s
+    method{4} = @(image) fROF(image); %7.353s
+    method{5} = @(image) fTV_L1(image); %105.698s
+    %method{6} = @(image) fNL_means(image); % slow
+    %method{7} = @(image) fWavelet(image);% for some reason worse than average
 end
 
 function [output] = fWiener(image)

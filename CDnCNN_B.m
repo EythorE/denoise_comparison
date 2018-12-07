@@ -4,7 +4,7 @@ addpath('utilities');
 folderTest   = 'test_images';
 ext          =  {'*.jpg','*.png','*.bmp'};
 
-showResult  = 1;
+showResult  = 0;
 pauseTime   = 0;
 
 
@@ -61,7 +61,7 @@ for noise = 1:length(addnoise)
     end
 end
 psnr_CDnCNN(:,:,end) = mean(squeeze(psnr_CDnCNN(:,:,1:end-1)),2);
-resTable = array2table(squeeze(psnr_CDnCNN), 'VariableNames',[imageNames{1:3}, {'Mean_PSNR'}],'RowNames',NoiseNames);
+resTable = array2table(squeeze(psnr_CDnCNN), 'VariableNames',[imageNames, {'Mean_PSNR'}],'RowNames',NoiseNames);
 disp(resTable)
 fprintf('\n');
     

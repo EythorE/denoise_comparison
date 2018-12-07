@@ -8,7 +8,7 @@ Final project for the course Digital Image Processing at University of Iceland.
 
 ## Prerequisites
 Matlab   
-Some toolboxes (Wavelet, Image Processing Toolbox, ...)   
+Some toolboxes (Image Processing Toolbox, ...)   
 MatConvNet
 
 
